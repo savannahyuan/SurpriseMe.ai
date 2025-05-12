@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SurpriseMe AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Section 1: Header and Prompt -->
+  <section class="header-section">
+    <div class="title-wrap">
+      <h1>SurpriseMe AI</h1>
+      <span class="subtitle">by Sav</span>
+    </div>
+
+    <p class="intro">
+      Hey there! 👋 Welcome to SurpriseMe AI 🎡 — just drop a prompt, spin the wheel, and see what surprise it picks for you! 😁✨
+    </p>
+
+    <div class="control">
+      <label for="prompt">I want to get</label>
+      <div class="input-row">
+        <input type="text" id="prompt" placeholder="a list of items" />
+        <button onclick="generateItems()" id="generateBtn">GO</button>
+        <button onclick="generateItems()" id="regenBtn" class="regen hidden">Generate</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Wheel -->
+  <section class="wheel-section">
+    <div id="wheelContainer" class="hidden">
+      <div id="wheelWrapper">
+        <h2 id="result" class="hidden"></h2>
+        <div class="canvas-panel hidden" id="canvasPanel">
+          <div class="arrow hidden"></div>
+          <button id="spinBtn" class="spin hidden spin-center">Spin</button>
+          <canvas id="wheelCanvas" width="700" height="700" class="hidden"></canvas>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+
+
+  <!-- Loader Overlay -->
+  <div class="loader-overlay hidden" id="loaderOverlay">
+    <span class="loader"></span>
+  </div>
+      <!-- Winner Modal -->
+<div id="winnerModal" class="modal hidden">
+  <div class="modal-content">
+    <p id="winnerText"></p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
