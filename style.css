@@ -178,7 +178,7 @@ canvas {
 /* Arrow */
 .arrow {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
   width: 0;
@@ -389,7 +389,10 @@ button.spin {
   }
   .arrow {
     display: block;
-    top: 175px; /* move up slightly for mobile layout */
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
 .modal-content {
   max-width: 240px;
@@ -409,4 +412,3 @@ button.spin {
     padding-top: 10px;
   }
 }
-
