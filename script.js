@@ -108,7 +108,9 @@ function drawWheel() {
     ctx.scale(-1, -1);
 
     ctx.fillStyle = "white";
-    ctx.font = "bold 14px sans-serif";
+    ctx.font = "bold 20px sans-serif";
+    const isMobile = window.innerWidth <= 600;
+    ctx.font = isMobile ? '18px Verdana' : '24px Verdana';
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     const label = item.length > 30 ? item.slice(0, 27) + "..." : item;
